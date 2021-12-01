@@ -1,1 +1,1 @@
-My goal with this project is to build a website similar to this one (with a few differences): https://www.frontendmentor.io/challenges/space-tourism-multipage-website-gRWj1URZ3
+My goal with this project is to build a website similar to this one (with a few differences): https://www.frontendmentor.io/challenges/planets-fact-site-gazqN8w_f
