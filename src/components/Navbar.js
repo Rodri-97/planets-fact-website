@@ -21,8 +21,7 @@ const Navbar = (props) => {
         <header id="navbar">
             <nav className="navbar-container container">
                 <Link to="/" className="home-link">
-                    <div className="navbar-logo"></div>
-                        THE PLANETS
+                    <div className="navbar-logo">THE PLANETS</div>
                 </Link>
                 <button
                     type="button"
