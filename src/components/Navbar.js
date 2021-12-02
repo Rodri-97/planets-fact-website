@@ -2,11 +2,9 @@ import { Link, NavLink } from "react-router-dom";
 
 const Navbar = (props) => {
     const { planetNames } = props;
-    let uniqueKey = - 1;
     const navItems = planetNames.map((planetName) => {
-        uniqueKey++;
         return (
-            <li key={uniqueKey.toString()} className="navbar-item">
+            <li key={planetName} className="navbar-item">
                 <NavLink 
                     activeclassname="active" 
                     to={`${planetName.toLowerCase()}`}

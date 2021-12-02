@@ -7,14 +7,11 @@ import "./styles/App.css";
 const App = () => {
   const data = require('./data.json');
   const planetNames = data.map(planet => planet.name);
-
-  let uniqueKey = -1;
-  const planetRoutes = data.map((planet) => {
-    uniqueKey++;
-    return (
-      <Route key={uniqueKey.toString()} path={`/${planet.name.toLowerCase()}`} element={<Planet name={planet.name} />}/>
-    )
-  })
+  const planetRoutes = data.map(planet => <Route 
+                                            key={planet.name} 
+                                            path={`/${planet.name.toLowerCase()}`} 
+                                            element={<Planet name={planet.name} />}
+                                          />);
 
   return (
     <HashRouter basename='/'>
