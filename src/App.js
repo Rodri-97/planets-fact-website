@@ -12,12 +12,14 @@ const App = () => {
                                             path={`/${planet.name.toLowerCase()}`} 
                                             element={<Planet name={planet.name} />}
                                           />);
+  const rockyPlanets = data.slice(0, 4);
+  const gasPlanets = data.slice(4);
 
   return (
     <HashRouter basename='/'>
       <Navbar planetNames={planetNames}/>
       <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home rockyPlanets={rockyPlanets} gasPlanets={gasPlanets} />} />
           {planetRoutes}
       </Routes>
     </HashRouter>
