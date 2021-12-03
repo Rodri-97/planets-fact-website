@@ -1,9 +1,20 @@
 import "../styles/Home.css";
 
 const Home = (props) => {
-    const { rockyPlanets, gasPlanets } = props;
-    const rockyDivs = rockyPlanets.map(planet => <div class="planet">{planet.name}</div>);
-    const gasDivs = gasPlanets.map(planet => <div class="planet">{planet.name}</div>);
+    const { data } = props;
+    const rockyPlanets = data.slice(0, 4);
+    const gasPlanets = data.slice(4);
+    const getPlanetsDivs = (planets) => {
+        return planets.map((planet) => {
+            return <div className="planet-container center">
+                <h4 className="planet-name">{planet.name}</h4>
+                <img key={planet.name} className="planet center" src={planet.images.planet} alt={planet.name}/>
+            </div>
+            
+        })
+    }
+    const rockyDivs = getPlanetsDivs(rockyPlanets);
+    const gasDivs = getPlanetsDivs(gasPlanets);
 
     return (
         <div className="page center" id="home">

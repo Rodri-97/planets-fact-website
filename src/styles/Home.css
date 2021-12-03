@@ -1,15 +1,8 @@
-.center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 #home {
     flex-direction: column;
 }
 
 .grid-container {
-    border: 2px solid orange;
     flex: 1;
     margin: 20px;
     flex-direction: column;
@@ -20,11 +13,22 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    grid-gap: 5px;
+    grid-gap: 35px;
+}
+
+.planet-container {
+    flex-direction: column;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.planet-container:hover {
+    background-color: rgba(255, 0, 0, 0.5);
 }
 
 .planet {
-    border: 3px solid red;
+    width: 140px;
+    height: 140px;
 }
 
 @media screen and (min-width: 1000px) {

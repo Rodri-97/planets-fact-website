@@ -2,24 +2,22 @@ import { HashRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar.js";
 import Home from "./components/Home.js";
 import Planet from "./components/Planet.js";
+import { data } from "./data.js";
 import "./styles/App.css";
 
 const App = () => {
-  const data = require('./data.json');
   const planetNames = data.map(planet => planet.name);
   const planetRoutes = data.map(planet => <Route 
                                             key={planet.name} 
                                             path={`/${planet.name.toLowerCase()}`} 
                                             element={<Planet name={planet.name} />}
                                           />);
-  const rockyPlanets = data.slice(0, 4);
-  const gasPlanets = data.slice(4);
 
   return (
     <HashRouter basename='/'>
       <Navbar planetNames={planetNames}/>
       <Routes>
-          <Route path="/" element={<Home rockyPlanets={rockyPlanets} gasPlanets={gasPlanets} />} />
+          <Route path="/" element={<Home data={data}/>} />
           {planetRoutes}
       </Routes>
     </HashRouter>
