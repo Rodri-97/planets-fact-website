@@ -1,8 +1,7 @@
 import "../styles/Planet.css";
 
 const Planet = (props) => {
-    const { setIsNavbarHidden, name } = props;
-    setIsNavbarHidden(false);
+    const { name } = props;
     return (
         <div className="planet page">{name}</div>
     )
