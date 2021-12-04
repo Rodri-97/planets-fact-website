@@ -5,13 +5,12 @@ import { planets } from "./data.js";
 import "./styles/App.css";
 
 const App = () => {
-  const planetNames = planets.map(planet => planet.name);
-  const [currentPlanet, setCurrentPlanet] = useState(planetNames[0]);
+  const [currentPlanet, setCurrentPlanet] = useState(planets[0].name);
   const changePlanet = (newCurrentPlanetName) => setCurrentPlanet(newCurrentPlanetName);
 
   return (
     <div>
-      <Navbar planetNames={planetNames} changePlanet={changePlanet}/>
+      <Navbar planets={planets} changePlanet={changePlanet}/>
       <Planet name={currentPlanet} />
     </div>
   )

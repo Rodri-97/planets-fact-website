@@ -2,7 +2,6 @@ import { useState } from "react";
 import "../styles/Navbar.css";
 
 const Navbar = (props) => {
-    const { planetNames, changePlanet } = props;
     const [isNavbarExpanded, setIsNavbarExpanded] = useState(false)
     const toggleNavbarVisibility = () => setIsNavbarExpanded(!isNavbarExpanded);
     const hideNavbar = () => setIsNavbarExpanded(false);
@@ -10,17 +9,18 @@ const Navbar = (props) => {
         changePlanet(planetName);
         hideNavbar();
     }
+    const { planets, changePlanet } = props;
 
-    const navItems = planetNames.map((planetName) => {
+    const navItems = planets.map((planet) => {
         return (
-            <li key={planetName}
+            <li key={planet.name}
                 className="navbar-link" 
-                onClick={() => handleClick(planetName)}
+                onClick={() => handleClick(planet.name)}
                 >
                 <div className="navbar-link-content center">
-                    <div className="dot"></div>
+                    <div className="dot" style={{backgroundColor: planet.color}}></div>
                     <div>
-                        <p>{planetName.toUpperCase()}</p>
+                        <p>{planet.name.toUpperCase()}</p>
                     </div>
                 </div>
                 
