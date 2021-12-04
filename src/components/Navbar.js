@@ -13,13 +13,17 @@ const Navbar = (props) => {
 
     const navItems = planetNames.map((planetName) => {
         return (
-            <li key={planetName} className="navbar-item">
-                <div
-                    className="navbar-link"
-                    onClick={() => handleClick(planetName)}
-                    >
-                    {planetName.toUpperCase()}
+            <li key={planetName}
+                className="navbar-link" 
+                onClick={() => handleClick(planetName)}
+                >
+                <div className="navbar-link-content center">
+                    <div className="dot"></div>
+                    <div>
+                        <p>{planetName.toUpperCase()}</p>
+                    </div>
                 </div>
+                
             </li>
         )
     })
