@@ -16,7 +16,6 @@
     background-color: var(--navbar-bg-color);
     letter-spacing: 2px;
     margin-bottom: 10px;
-    height: 70px;
 }
 
 .navbar-container {
@@ -42,6 +41,7 @@
     align-items: center;
     left: 0;
     right: 0;
+    top: 0;
 }
 
 #navbar-toggle[aria-expanded='true'] + #navbar-menu .navbar-links {
@@ -170,7 +170,7 @@
 
     .navbar-link:hover {
         background-color: transparent;
-        border-top: 4px solid orange;
+        border-top: 8px solid orange;
         border-bottom: none;
     }
 }
@@ -193,6 +193,10 @@
     .navbar-link {
         margin: 0;
         padding: 0 10px;
+    }
+
+    .navbar-link:hover {
+        border-width: 3px;
     }
 }
 
