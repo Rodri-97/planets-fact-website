@@ -15,11 +15,7 @@ body {
     justify-content: center;
 }
 
-a {
-    text-decoration: none;
-}
-
-a, button {
+button {
     cursor: pointer;
 }
 

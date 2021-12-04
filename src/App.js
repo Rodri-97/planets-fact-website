@@ -1,26 +1,19 @@
-import { HashRouter, Routes, Route } from "react-router-dom";
+import { useState } from "react";
 import Navbar from "./components/Navbar.js";
-import Home from "./components/Home.js";
 import Planet from "./components/Planet.js";
-import { data } from "./data.js";
+import { planets } from "./data.js";
 import "./styles/App.css";
 
 const App = () => {
-  const planetNames = data.map(planet => planet.name);
-  const planetRoutes = data.map(planet => <Route 
-                                            key={planet.name} 
-                                            path={`/${planet.name.toLowerCase()}`} 
-                                            element={<Planet name={planet.name} />}
-                                          />);
+  const planetNames = planets.map(planet => planet.name);
+  const [currentPlanet, setCurrentPlanet] = useState(planetNames[0]);
+  const changePlanet = (newCurrentPlanetName) => setCurrentPlanet(newCurrentPlanetName);
 
   return (
-    <HashRouter basename='/'>
-      <Navbar planetNames={planetNames}/>
-      <Routes>
-          <Route path="/" element={<Home data={data} />} />
-          {planetRoutes}
-      </Routes>
-    </HashRouter>
+    <div>
+      <Navbar planetNames={planetNames} changePlanet={changePlanet}/>
+      <Planet name={currentPlanet} />
+    </div>
   )
 }
 

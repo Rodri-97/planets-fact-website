@@ -1,22 +1,25 @@
 import { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
 import "../styles/Navbar.css";
 
 const Navbar = (props) => {
+    const { planetNames, changePlanet } = props;
     const [isNavbarExpanded, setIsNavbarExpanded] = useState(false)
     const toggleNavbarVisibility = () => setIsNavbarExpanded(!isNavbarExpanded);
-    const { planetNames } = props;
+    const hideNavbar = () => setIsNavbarExpanded(false);
+    const handleClick = (planetName) => {
+        changePlanet(planetName);
+        hideNavbar();
+    }
+
     const navItems = planetNames.map((planetName) => {
         return (
             <li key={planetName} className="navbar-item">
-                <NavLink 
-                    activeclassname="active" 
-                    to={`${planetName.toLowerCase()}`}
+                <div
                     className="navbar-link"
-                    onClick={toggleNavbarVisibility}
+                    onClick={() => handleClick(planetName)}
                     >
                     {planetName.toUpperCase()}
-                </NavLink>
+                </div>
             </li>
         )
     })
@@ -24,9 +27,7 @@ const Navbar = (props) => {
     return (
         <header id="navbar">
             <nav className="navbar-container container">
-                <Link to="/" className="home-link">
-                    <h1 id="page-title">THE PLANETS</h1>
-                </Link>
+                <div><h1 id="page-title">THE PLANETS</h1></div>
                 <button
                     type="button"
                     id="navbar-toggle"

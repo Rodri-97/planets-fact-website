@@ -23,7 +23,7 @@ import neptunePlanet from "./assets/planet-neptune.svg";
 import neptuneInternal from "./assets/planet-neptune-internal.svg";
 import neptuneGeology from "./assets/geology-neptune.png";
 
-export const data = [
+export const planets = [
     {
         "name": "Mercury",
         "overview": {
