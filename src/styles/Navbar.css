@@ -160,6 +160,7 @@
 
     .navbar-links {
         background-color: transparent;
+        border: 3px solid transparent;
     }
 
     .navbar-link {
@@ -202,10 +203,10 @@
     .navbar-link {
         margin: 15px;
         height: var(--navbar-height);
-        border-top: 8px solid transparent;
+        border-top: 5px solid transparent;
     }
 
     .navbar-link:hover {
-        border-top: 8px solid orange;
+        border-top: 5px solid orange;
     }
 }
