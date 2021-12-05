@@ -170,12 +170,9 @@
 
     .navbar-link:hover {
         background-color: transparent;
-        border-top: 8px solid orange;
         border-bottom: none;
     }
-}
 
-@media screen and (min-width: 700px) {
     .navbar-link-content {
         margin-left: 0;
     }
@@ -193,10 +190,11 @@
     .navbar-link {
         margin: 0;
         padding: 0 10px;
+        border-top: 3px solid transparent;
     }
 
     .navbar-link:hover {
-        border-width: 3px;
+        border-top: 3px solid orange;
     }
 }
 
@@ -204,5 +202,10 @@
     .navbar-link {
         margin: 15px;
         height: var(--navbar-height);
+        border-top: 8px solid transparent;
+    }
+
+    .navbar-link:hover {
+        border-top: 8px solid orange;
     }
 }
