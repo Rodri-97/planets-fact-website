@@ -1,0 +1,19 @@
+.selector-item {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.selector-item:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.selector-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: stretch;
+    border-bottom: 1px solid gray;
+    height: 50px;
+}
