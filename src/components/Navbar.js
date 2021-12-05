@@ -10,13 +10,20 @@ const Navbar = (props) => {
         hideNavbar();
     }
     const { planets, changePlanet } = props;
+    const [borderColor, setBorderColor] = useState("transparent");
+    const styles = {
+        borderTopColor: borderColor
+    }
 
     const navItems = planets.map((planet) => {
         return (
             <li key={planet.name}
                 className="navbar-link" 
                 onClick={() => handleClick(planet.name)}
-                >
+                onMouseEnter={() => setBorderColor(planet.color)}
+                onMouseLeave={() => setBorderColor("transparent")}
+                style={planet.color === borderColor ? styles : null}
+            >
                 <div className="navbar-link-content center">
                     <div className="dot" style={{backgroundColor: planet.color}}></div>
                     <div>
