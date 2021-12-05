@@ -1,9 +1,9 @@
 import "../styles/Planet.css";
 
 const Planet = (props) => {
-    const { name } = props;
+    const { planet } = props;
     return (
-        <div className="planet page">{name}</div>
+        <div className="planet page">{planet.name}</div>
     )
 }
 

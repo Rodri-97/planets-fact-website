@@ -5,8 +5,8 @@ const Navbar = (props) => {
     const [isNavbarExpanded, setIsNavbarExpanded] = useState(false)
     const toggleNavbarVisibility = () => setIsNavbarExpanded(!isNavbarExpanded);
     const hideNavbar = () => setIsNavbarExpanded(false);
-    const handleClick = (planetName) => {
-        changePlanet(planetName);
+    const handleClick = (planet) => {
+        changePlanet(planet);
         hideNavbar();
     }
     const { planets, changePlanet } = props;
@@ -19,7 +19,7 @@ const Navbar = (props) => {
         return (
             <li key={planet.name}
                 className="navbar-link" 
-                onClick={() => handleClick(planet.name)}
+                onClick={() => handleClick(planet)}
                 onMouseEnter={() => setBorderColor(planet.color)}
                 onMouseLeave={() => setBorderColor("transparent")}
                 style={planet.color === borderColor ? styles : null}
