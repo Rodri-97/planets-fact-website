@@ -4,6 +4,7 @@ import "../styles/Planet.css";
 
 const Planet = (props) => {
     const { currentPlanet } = props;
+    const { rotation, revolution, radius, temperature } = currentPlanet;
     const [currentTab, setCurrentTab] = useState("overview");
     const styles = {
         borderBottom: `4px solid ${currentPlanet.color}`,
@@ -36,6 +37,12 @@ const Planet = (props) => {
                 </div>
             </div>
             <Tab currentPlanet={currentPlanet} currentTab={currentTab}/>
+            <div className="statistics center">
+                <div className="statistic">Rotation Time {rotation}</div>
+                <div className="statistic">Revolution Time {revolution}</div>
+                <div className="statistic">Radius {radius}</div>
+                <div className="statistic">Average Temp. {temperature}</div>
+            </div>
         </div>
     )
 }

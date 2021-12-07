@@ -1,3 +1,9 @@
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .selector-item {
     cursor: pointer;
     display: flex;
@@ -24,4 +30,14 @@
 
 .selector-top-item {
     border-bottom: 4px solid transparent;
+}
+
+.statistics {
+    flex-direction: column;
+    border: 2px solid green;
+}
+
+.statistic {
+    border: 1px solid gray;
+    margin: 5px 0;
 }
