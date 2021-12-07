@@ -1,0 +1,39 @@
+.tab-content {
+    border: 3px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 50px;
+}
+
+.planet-image {
+    width: 200px;
+    height: 200px;
+    padding: 80px;
+    border: 1px solid green;
+}
+
+.planet-name {
+    border: 1px solid yellow;
+}
+
+.text {
+    border: 1px solid orange;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.dots-span {
+    margin: 0 3px;
+}
+
+.wikipedia-source {
+    margin-top: 30px;
+}
+
+a {
+    text-decoration: underline;
+    color: rgb(150, 150, 150);
+    font-weight: bold;
+}

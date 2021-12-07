@@ -4,7 +4,7 @@ import "../styles/Planet.css";
 
 const Planet = (props) => {
     const { currentPlanet } = props;
-    const [currentTab, setCurrentTab] = useState("Overview");
+    const [currentTab, setCurrentTab] = useState("overview");
     const styles = {
         borderBottom: `4px solid ${currentPlanet.color}`
     }
@@ -14,24 +14,24 @@ const Planet = (props) => {
             <div className="selector selector-top">
                 <div 
                     className="selector-item selector-top-item" 
-                    onClick={() => setCurrentTab("Overview")}
-                    style={currentTab === "Overview" ? styles : null}
+                    onClick={() => setCurrentTab("overview")}
+                    style={currentTab === "overview" ? styles : null}
                 >
-                    Overview
+                    OVERVIEW
                 </div>
                 <div 
                     className="selector-item selector-top-item" 
-                    onClick={() => setCurrentTab("Internal")}
-                    style={currentTab === "Internal" ? styles : null}
+                    onClick={() => setCurrentTab("internal")}
+                    style={currentTab === "internal" ? styles : null}
                 >
-                        Internal
+                        INTERNAL
                 </div>
                 <div 
                     className="selector-item selector-top-item" 
-                    onClick={() => setCurrentTab("Surface")}
-                    style={currentTab === "Surface" ? styles : null}
+                    onClick={() => setCurrentTab("surface")}
+                    style={currentTab === "surface" ? styles : null}
                 >
-                    Surface
+                    SURFACE
                 </div>
             </div>
             <Tab currentPlanet={currentPlanet} currentTab={currentTab}/>

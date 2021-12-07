@@ -27,7 +27,7 @@ const Navbar = (props) => {
                 <div className="navbar-link-content center">
                     <div className="dot" style={{backgroundColor: planet.color}}></div>
                     <div>
-                        <p>{planet.name.toUpperCase()}</p>
+                        <p className="nav-planet-name">{planet.name.toUpperCase()}</p>
                     </div>
                 </div>
                 
