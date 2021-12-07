@@ -6,7 +6,8 @@ const Planet = (props) => {
     const { currentPlanet } = props;
     const [currentTab, setCurrentTab] = useState("overview");
     const styles = {
-        borderBottom: `4px solid ${currentPlanet.color}`
+        borderBottom: `4px solid ${currentPlanet.color}`,
+        color: "white"
     }
 
     return (

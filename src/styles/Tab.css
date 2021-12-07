@@ -1,8 +1,11 @@
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .tab-content {
     border: 3px solid red;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
     padding: 50px;
 }
@@ -30,10 +33,30 @@
 
 .wikipedia-source {
     margin-top: 30px;
+    color: gray;
+    font-size: 13px;
 }
 
-a {
+.wikipedia-link {
     text-decoration: underline;
     color: rgb(150, 150, 150);
     font-weight: bold;
+}
+
+.wikipedia-link:hover {
+    color: white;
+}
+
+.images-container {
+    border: 3px solid pink;
+    position: relative;
+}
+
+.geology-image {
+    width: 90px;
+    height: 90px;
+    border: 3px solid orange;
+    position: absolute;
+    z-index: 1;
+    margin-top: 150px;
 }

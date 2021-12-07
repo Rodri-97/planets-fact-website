@@ -23,6 +23,8 @@
     height: 100%;
     align-items: center;
     border-bottom: 1px solid rgba(125, 125, 125, 0.8);
+    position: relative;
+    z-index: 2;
 }
 
 #page-title {
@@ -68,7 +70,7 @@
     background-color: rgba(255, 255, 255, 0.5);
 }
 
-.nav-planet-name {
+.navbar-planet-name {
     font-weight: bold;
 }
 
