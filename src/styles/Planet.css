@@ -17,3 +17,7 @@
     border-bottom: 1px solid gray;
     height: 50px;
 }
+
+.selector-top-item {
+    border-bottom: 4px solid transparent;
+}

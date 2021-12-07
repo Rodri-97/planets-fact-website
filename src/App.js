@@ -11,7 +11,9 @@ const App = () => {
   return (
     <div>
       <Navbar planets={planets} changePlanet={changePlanet}/>
-      <Planet planet={currentPlanet} />
+      <Planet 
+        currentPlanet={currentPlanet}
+      />
     </div>
   )
 }
