@@ -33,11 +33,30 @@
 }
 
 .statistics {
+    display: flex;
     flex-direction: column;
-    border: 2px solid green;
+    align-items: stretch;
+    padding: 20px;
+}
+
+.statistics-container {
+    border: 1px solid gray;
+    margin: 5px 0;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.statistic-name, .statistic {
+    font-weight: bold;
+}
+
+.statistic-name {
+    color: gray;
+    font-size: 10px;
 }
 
 .statistic {
-    border: 1px solid gray;
-    margin: 5px 0;
+    margin-left: auto;
 }

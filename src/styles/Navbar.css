@@ -198,10 +198,6 @@
         padding: 0 10px;
         border-top: 3px solid transparent;
     }
-
-    .navbar-link:hover {
-        border-top: 3px solid orange;
-    }
 }
 
 @media screen and (min-width: 1000px) {

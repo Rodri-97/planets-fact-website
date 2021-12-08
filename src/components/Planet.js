@@ -37,11 +37,23 @@ const Planet = (props) => {
                 </div>
             </div>
             <Tab currentPlanet={currentPlanet} currentTab={currentTab}/>
-            <div className="statistics center">
-                <div className="statistic">Rotation Time {rotation}</div>
-                <div className="statistic">Revolution Time {revolution}</div>
-                <div className="statistic">Radius {radius}</div>
-                <div className="statistic">Average Temp. {temperature}</div>
+            <div className="statistics">
+                <div className="statistics-container">
+                    <div className="statistic-name">ROTATION TIME</div>
+                    <div className="statistic">{rotation}</div>
+                </div>
+                <div className="statistics-container">
+                    <div className="statistic-name">REVOLUTION TIME</div>
+                    <div className="statistic">{revolution}</div>
+                </div>
+                <div className="statistics-container">
+                    <div className="statistic-name">RADIUS</div>
+                    <div className="statistic">{radius}</div>
+                </div>
+                <div className="statistics-container">
+                    <div className="statistic-name">AVERAGE TEMP.</div>
+                    <div className="statistic">{temperature}</div>
+                </div>
             </div>
         </div>
     )
