@@ -13,23 +13,23 @@ const Planet = (props) => {
 
     return (
         <div className="planet page">
-            <div className="selector selector-top">
+            <div className="selector mobile-selector">
                 <div 
-                    className="selector-item selector-top-item" 
+                    className="selector-item mobile-selector-item" 
                     onClick={() => setCurrentTab("overview")}
                     style={currentTab === "overview" ? styles : null}
                 >
                     OVERVIEW
                 </div>
                 <div 
-                    className="selector-item selector-top-item" 
+                    className="selector-item mobile-selector-item" 
                     onClick={() => setCurrentTab("internal")}
                     style={currentTab === "internal" ? styles : null}
                 >
                         INTERNAL
                 </div>
                 <div 
-                    className="selector-item selector-top-item" 
+                    className="selector-item mobile-selector-item" 
                     onClick={() => setCurrentTab("surface")}
                     style={currentTab === "surface" ? styles : null}
                 >

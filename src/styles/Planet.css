@@ -19,7 +19,7 @@
     color: white;
 }
 
-.selector-top {
+.mobile-selector {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -28,7 +28,7 @@
     height: 50px;
 }
 
-.selector-top-item {
+.mobile-selector-item {
     border-bottom: 4px solid transparent;
 }
 
