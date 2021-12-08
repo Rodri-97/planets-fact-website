@@ -6,7 +6,8 @@
 
 .tab-content {
     flex-direction: column;
-    padding: 50px;
+    padding: 20px;
+    border: 3px solid red;
 }
 
 .planet-image {
@@ -15,9 +16,27 @@
     padding: 80px;
 }
 
+.main-information {
+    display: flex;
+    flex-direction: row;
+}
+
+.text-container {
+    border: 3px solid orange;
+}
+
+.planet-name, .wikipedia-source {
+    text-align: center;
+}
+
 .text {
     font-size: 14px;
     letter-spacing: 1px;
+    text-align: left;
+}
+
+.desktop-selector {
+    display: none;
 }
 
 .dots-span {
@@ -50,4 +69,40 @@
     position: absolute;
     z-index: 1;
     margin-top: 150px;
+}
+
+@media screen and (min-width: 700px) {
+    .main-information div {
+        flex: 1;
+    }
+
+    .text-container {
+        font-size: 12px;
+    }
+
+    .desktop-selector {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        border: 3px solid green;
+        padding-left: 40px;
+        padding: 20px 0 20px 30px;
+        gap: 15px;
+    }
+
+    .desktop-selector-item {
+        border: 1px solid gray;
+        width: 300px;
+        font-size: 12px;
+    }
+
+    .desktop-selector-item:hover {
+        background-color: rgb(80, 80, 80);
+    }
+
+    .desktop-selector-num {
+        color: rgb(220, 220, 220);
+        margin: 0 20px;
+    }
 }

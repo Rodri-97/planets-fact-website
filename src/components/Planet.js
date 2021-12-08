@@ -6,6 +6,8 @@ const Planet = (props) => {
     const { currentPlanet } = props;
     const { rotation, revolution, radius, temperature } = currentPlanet;
     const [currentTab, setCurrentTab] = useState("overview");
+    const changeTab = (nextTab) => setCurrentTab(nextTab);
+
     const styles = {
         borderBottom: `4px solid ${currentPlanet.color}`,
         color: "white"
@@ -36,7 +38,7 @@ const Planet = (props) => {
                     SURFACE
                 </div>
             </div>
-            <Tab currentPlanet={currentPlanet} currentTab={currentTab}/>
+            <Tab currentPlanet={currentPlanet} currentTab={currentTab} changeTab={changeTab}/>
             <div className="statistics">
                 <div className="statistics-container">
                     <div className="statistic-name">ROTATION TIME</div>

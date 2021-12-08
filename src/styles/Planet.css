@@ -9,14 +9,8 @@
     display: flex;
     align-items: center;
     padding: 5px;
-    font-size: 10px;
     letter-spacing: 2px;
-    color: rgb(170, 170, 170);
     font-weight: bold;
-}
-
-.selector-item:hover {
-    color: white;
 }
 
 .mobile-selector {
@@ -26,10 +20,16 @@
     align-items: stretch;
     border-bottom: 1px solid gray;
     height: 50px;
+    font-size: 10px;
 }
 
 .mobile-selector-item {
     border-bottom: 4px solid transparent;
+    color: rgb(170, 170, 170);
+}
+
+.mobile-selector-item:hover {
+    color: white;
 }
 
 .statistics {
@@ -59,4 +59,10 @@
 
 .statistic {
     margin-left: auto;
+}
+
+@media screen and (min-width: 700px) {
+    .mobile-selector {
+        display: none;
+    }
 }
