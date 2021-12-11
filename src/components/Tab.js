@@ -25,8 +25,8 @@ const Tab = (props) => {
     }
 
     return (
-        <div className="tab-content center">
-            <div className="images-container center">
+        <div className="tab-content">
+            <div className="images-container">
                 <img 
                     src={currentTab === "internal" ? images.internal : images.planet} 
                     alt={name} 
@@ -37,7 +37,7 @@ const Tab = (props) => {
 
             <div className="main-information">
                 <div className="text-container">
-                    <h1 className="planet-name">{name}</h1>
+                    <h1 className="planet-name">{name.toUpperCase()}</h1>
                     <div className="text">{textDisplayed}</div>
                     <div className="wikipedia-source">Source<span className="dots-span">:</span>
                         <a href={wikipediaSource} target="_blank" rel="noreferrer" className="wikipedia-link">

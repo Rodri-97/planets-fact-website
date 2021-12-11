@@ -7,8 +7,6 @@
 .selector-item {
     cursor: pointer;
     display: flex;
-    align-items: center;
-    padding: 5px;
     letter-spacing: 2px;
     font-weight: bold;
 }
@@ -26,6 +24,8 @@
 .mobile-selector-item {
     border-bottom: 4px solid transparent;
     color: rgb(170, 170, 170);
+    padding: 5px;
+    align-items: center;
 }
 
 .mobile-selector-item:hover {
@@ -66,7 +66,6 @@
     .statistics {
         flex-direction: row;
         justify-content: center;
-        border: 3px solid orange;
         gap: 10px;
     }
     
@@ -74,5 +73,15 @@
         flex-direction: column;
         flex: 1;
         gap: 10px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .statistic-name {
+        font-size: 15px;
+    }
+
+    .statistics {
+        font-size: 25px;
     }
 }

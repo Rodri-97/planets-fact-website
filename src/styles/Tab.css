@@ -1,13 +1,7 @@
-.center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .tab-content {
+    display: flex;
     flex-direction: column;
     padding: 20px;
-    border: 3px solid red;
 }
 
 .planet-image {
@@ -21,18 +15,19 @@
     flex-direction: row;
 }
 
-.text-container {
-    border: 3px solid orange;
-}
-
 .planet-name, .wikipedia-source {
     text-align: center;
 }
 
+.planet-name {
+    font-size: 40px;
+}
+
 .text {
-    font-size: 14px;
+    font-size: 12px;
     letter-spacing: 1px;
     text-align: left;
+    padding: 0 30px;
 }
 
 .desktop-selector {
@@ -44,9 +39,9 @@
 }
 
 .wikipedia-source {
-    margin-top: 30px;
     color: gray;
     font-size: 13px;
+    margin-top: 30px;
 }
 
 .wikipedia-link {
@@ -61,6 +56,9 @@
 
 .images-container {
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .geology-image {
@@ -72,29 +70,48 @@
 }
 
 @media screen and (min-width: 700px) {
-    .main-information div {
+    .text-container, .desktop-selector {
         flex: 1;
+        padding-left: 30px;
     }
 
-    .text-container {
-        font-size: 12px;
+    .planet-image {
+        height: 400px;
+        width: 400px;
+    }
+
+    .geology-image {
+        width: 180px;
+        height: 180px;
+        margin-top: 350px;
+    }
+
+    .planet-name, .wikipedia-source {
+        text-align: left;
+    }
+
+    .planet-name {
+        font-size: 45px;
+    }
+
+    .text {
+        font-size: 14px;
+        height: 120px;
+        padding: 0;
     }
 
     .desktop-selector {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        border: 3px solid green;
-        padding: 20px 0 20px 30px;
+        align-items: stretch;
+        justify-content: center;
         gap: 15px;
-        height: 200px;
     }
 
     .desktop-selector-item {
         border: 1px solid gray;
-        width: 300px;
-        font-size: 12px;
+        font-size: 14px;
+        padding: 15px;
     }
 
     .desktop-selector-item:hover {
@@ -104,5 +121,37 @@
     .desktop-selector-num {
         color: rgb(220, 220, 220);
         margin: 0 20px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .tab-content {
+        flex-direction: row;
+        margin-top: 150px;
+    }
+
+    .images-container {
+        flex: 2;
+    }
+
+    .main-information {
+        flex: 1;
+        flex-direction: column;
+    }
+
+    .planet-name {
+        font-size: 50px;
+    }
+
+    .text {
+        font-size: 16px;
+    }
+
+    .desktop-selector {
+        padding: 30px;
+    }
+
+    .wikipedia-source {
+        padding-top: 30px;
     }
 }
